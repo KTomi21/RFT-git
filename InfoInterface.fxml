@@ -19,9 +19,18 @@
                   <Font name="System Italic" size="14.0" />
                </font>
             </Label>
+            <Label layoutX="14.0" layoutY="148.0" text="17.század">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="185.0" prefHeight="83.0" prefWidth="361.0" text="1623-ban Wilhelm Schickard építette az első automatikus számológépet, aminek a számoló óra nevet adta. 22 évvel később, 1645-ben Blaise Pascal francia filozófus megalkotta a később Pascaline néven ismertté vált szerkezetet, amit 1799-ig használtak az adók kiszámításához. A német filozófus, Leibniz Calculus ratiocinatort." textAlignment="JUSTIFY" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
             </children>
       </Pane>
       <Pane layoutX="14.0" layoutY="14.0" prefHeight="35.0" prefWidth="339.0" />
    </children>
-
 </AnchorPane>
