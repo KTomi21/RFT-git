@@ -8,6 +8,18 @@
 <AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.szamologep.Controller">
     <children>
       <Pane layoutX="12.0" layoutY="46.0" prefHeight="352.0" prefWidth="379.0">
+            <children>
+                    <Label alignment="CENTER" layoutX="128.0" layoutY="9.0" prefHeight="35.0" prefWidth="124.0" text="Története" textAlignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutX="18.0" layoutY="44.0" prefHeight="104.0" prefWidth="361.0" text="Az első, a számítási feladatot megkönnyítő eszköz az abakusz volt. Fa kereten fémrudakon golyókat lehet húzni. Sokkal régebbi, mint az arab számrendszer. Régen elterjedt volt mindenhol, de ma már csak Kínában használják a kereskedők." textAlignment="JUSTIFY" wrapText="true">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </Label>
+            </children>
       </Pane>
       <Pane layoutX="14.0" layoutY="14.0" prefHeight="35.0" prefWidth="339.0" />
    </children>
