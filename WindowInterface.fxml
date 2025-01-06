@@ -165,8 +165,29 @@
                     </children>
                 </Pane>
             </children>
-        </Pane>
+              </Pane>
           </children>
+        </Pane>
+        <Pane fx:id="titlePane" prefHeight="37.0" prefWidth="460.0">
+            <children>
+                <Label layoutX="49.0" layoutY="11.0" text="Calculator" textFill="WHITE" />
+            <ImageView fx:id="btnClose" fitHeight="26.0" fitWidth="26.0" layoutX="420.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/close.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btnMinimize" fitHeight="26.0" fitWidth="26.0" layoutX="384.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/hide.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/icon.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnInfo" layoutX="339.0" layoutY="7.0" mnemonicParsing="false" onAction="#onInfoClicked" text="Info" />
+            </children>
         </Pane>
     </children>
 </AnchorPane>
