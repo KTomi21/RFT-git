@@ -43,6 +43,13 @@ public class DatabaseHandler {
 
     public static void addUser(String username, String password) {
         String query = "INSERT INTO users (username, password) VALUES (?, ?)";
-        
+        try (Connection conn = connect(); PreparedStatement stmt = conn.prepareStatement(query)) {
+            stmt.setString(1, username);
+            stmt.setString(2, password);
+            stmt.executeUpdate();
+            System.out.println("Felhasználó sikeresen mentve!");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
