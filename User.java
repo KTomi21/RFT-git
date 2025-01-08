@@ -19,5 +19,18 @@ public class User {
         String user = "tomi";
         String pass = "tomi";
 
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection connection = DriverManager.getConnection(url, user, pass);
+            String query = "INSERT INTO users (username, password) VALUES (?, ?)";
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setString(1, username);
+            statement.setString(2, password);
+            statement.executeUpdate();
+            System.out.println("Felhasználó sikeresen mentve!");
+            connection.close();
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }
