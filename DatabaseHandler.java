@@ -27,4 +27,8 @@ public class DatabaseHandler {
             return null;
         }
     }
+
+    public static boolean validateUser(String username, String password) {
+        String query = "SELECT * FROM users WHERE username = ? AND password = ?";
+    }
 }
