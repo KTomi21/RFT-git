@@ -14,4 +14,10 @@ public class User {
         this.password = password;
     }
 
+    public void saveToDatabase() {
+        String url = "jdbc:mysql://localhost:3306/rft";
+        String user = "tomi";
+        String pass = "tomi";
+
+    }
 }
