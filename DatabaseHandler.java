@@ -40,4 +40,9 @@ public class DatabaseHandler {
             return false;
         }
     }
+
+    public static void addUser(String username, String password) {
+        String query = "INSERT INTO users (username, password) VALUES (?, ?)";
+        
+    }
 }
