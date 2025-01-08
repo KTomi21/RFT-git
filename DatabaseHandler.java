@@ -19,5 +19,12 @@ public class DatabaseHandler {
         }
     }
 
-
+    public static Connection connect() {
+        try {
+            return DriverManager.getConnection(DB_URL, USER, PASSWORD);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 }
