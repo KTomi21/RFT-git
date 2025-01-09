@@ -12,6 +12,21 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 public class LoginController {
+    @FXML
+    private TextField usernameField;
 
+    @FXML
+    private PasswordField passwordField;
+    
+    private Stage mainStage;
+
+    public void setMainStage(Stage stage) {
+        this.mainStage = stage;
+    }
+
+    @FXML
+    public void onLoginClicked(ActionEvent event) {
+        
+    }
 
 }
