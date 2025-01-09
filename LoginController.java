@@ -38,9 +38,22 @@ public class LoginController {
 
     private void loadCalculatorScreen(ActionEvent event) {
         try {
-            
-        } catch () {
-           
+            Stage calculatorStage = new Stage();
+            calculatorStage.initStyle(StageStyle.UNDECORATED);
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/szamologep/WindowInterface.fxml"));
+            Parent root = loader.load();
+
+            Controller calculatorController = loader.getController();
+            calculatorController.init(calculatorStage);
+
+            Scene scene = new Scene(root);
+            calculatorStage.setScene(scene);
+            calculatorStage.setTitle("Számológép");
+            calculatorStage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            showError("Failed to load calculator screen.");
         }
     }
 }
