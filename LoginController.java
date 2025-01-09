@@ -36,4 +36,11 @@ public class LoginController {
         }
     }
 
+    private void loadCalculatorScreen(ActionEvent event) {
+        try {
+            
+        } catch () {
+           
+        }
+    }
 }
