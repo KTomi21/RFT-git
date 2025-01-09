@@ -10,9 +10,18 @@ public class MainWindow extends Application {
     @Override
     public void start(Stage stage) {
         try {
-            
-        } catch () {
-            
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/szamologep/LoginInterface.fxml"));
+            Parent root = loader.load();
+
+            LoginController loginController = loader.getController();
+            loginController.setMainStage(stage);
+
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.setTitle("Login");
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
