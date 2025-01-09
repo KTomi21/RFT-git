@@ -67,4 +67,12 @@ public class LoginController {
         alert.setContentText(message);
         alert.showAndWait();
     }
+
+    public void showLoginWindow() {
+        if (mainStage != null) {
+            mainStage.initStyle(StageStyle.DECORATED);
+            mainStage.setTitle("Bejelentkezés");
+            mainStage.show();
+        }
+    }
 }
