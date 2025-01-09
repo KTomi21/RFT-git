@@ -51,6 +51,9 @@ public class LoginController {
             calculatorStage.setScene(scene);
             calculatorStage.setTitle("Számológép");
             calculatorStage.show();
+
+            Stage currentStage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+            currentStage.close();
         } catch (Exception e) {
             e.printStackTrace();
             showError("Failed to load calculator screen.");
