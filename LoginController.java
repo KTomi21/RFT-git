@@ -26,7 +26,14 @@ public class LoginController {
 
     @FXML
     public void onLoginClicked(ActionEvent event) {
-        
+        String username = usernameField.getText();
+        String password = passwordField.getText();
+
+        if (DatabaseHandler.validateUser(username, password)) {
+            loadCalculatorScreen(event);
+        } else {
+            showError("Invalid username or password!");
+        }
     }
 
 }
