@@ -24,4 +24,8 @@ public class Controller {
     @FXML
     private Label lblResult;
 
+    private double x, y;
+    private double num1 = 0;
+    private String operator = "+";
+
 }
