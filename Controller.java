@@ -82,6 +82,15 @@ public class Controller {
         } else if (symbol.equals("Clear")) {
             lblResult.setText(String.valueOf(0.0));
             operator = ".";
-        } 
+        } else {
+            switch (symbol) {
+                case "Plus" -> operator = "+";
+                case "Minus" -> operator = "-";
+                case "Multiply" -> operator = "*";
+                case "Divide" -> operator = "/";
+            }
+            num1 = Double.parseDouble(lblResult.getText());
+            lblResult.setText(String.valueOf(0.0));
+        }
     }
 }
