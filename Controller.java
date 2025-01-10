@@ -67,4 +67,21 @@ public class Controller {
         int value = Integer.parseInt(((Pane) event.getSource()).getId().replace("btn", ""));
         lblResult.setText(Double.parseDouble(lblResult.getText()) == 0 ? String.valueOf((double) value) : String.valueOf(Double.parseDouble(lblResult.getText()) * 10 + value));
     }
+    @FXML
+    void onSymbolClicked(MouseEvent event) {
+        String symbol = ((Pane) event.getSource()).getId().replace("btn", "");
+        if (symbol.equals("Equals")) {
+            double num2 = Double.parseDouble(lblResult.getText());
+            switch (operator) {
+                case "+" -> lblResult.setText((num1 + num2) + "");
+                case "-" -> lblResult.setText((num1 - num2) + "");
+                case "*" -> lblResult.setText((num1 * num2) + "");
+                case "/" -> lblResult.setText((num1 / num2) + "");
+            }
+            operator = ".";
+        } else if (symbol.equals("Clear")) {
+            lblResult.setText(String.valueOf(0.0));
+            operator = ".";
+        } 
+    }
 }
