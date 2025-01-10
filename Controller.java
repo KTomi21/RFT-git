@@ -28,4 +28,23 @@ public class Controller {
     private double num1 = 0;
     private String operator = "+";
 
+    public void init(Stage stage) {
+        titlePane.setOnMousePressed(mouseEvent -> {
+            x = mouseEvent.getSceneX();
+            y = mouseEvent.getSceneY();
+        });
+        titlePane.setOnMouseDragged(mouseEvent -> {
+            stage.setX(mouseEvent.getScreenX() - x);
+            stage.setY(mouseEvent.getScreenY() - y);
+        });
+
+        btnClose.setOnMouseClicked(mouseEvent -> {
+            stage.close();
+        });
+
+        btnMinimize.setOnMouseClicked(mouseEvent -> {
+            stage.setIconified(true);
+        });
+    }
+
 }
