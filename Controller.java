@@ -46,5 +46,21 @@ public class Controller {
             stage.setIconified(true);
         });
     }
+    public void onInfoClicked(ActionEvent event) {
+        try {
+            FXMLLoader infoLoader = new FXMLLoader(getClass().getResource("InfoInterface.fxml"));
+            Scene infoScene = new Scene(infoLoader.load());
+
+            Stage infoStage = new Stage();
+            infoStage.initStyle(StageStyle.UTILITY);
+            infoStage.initModality(Modality.APPLICATION_MODAL);
+            infoStage.setTitle("Information");
+            infoStage.setScene(infoScene);
+            infoStage.showAndWait();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 }
