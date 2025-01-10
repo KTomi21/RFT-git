@@ -13,3 +13,15 @@ import javafx.scene.Scene;
 import javafx.stage.Modality;
 import javafx.stage.StageStyle;
 import java.io.IOException;
+
+public class Controller {
+    @FXML
+    private Pane titlePane;
+    @FXML
+    private ImageView btnMinimize, btnClose;
+    @FXML
+    public Button btnInfo;
+    @FXML
+    private Label lblResult;
+
+}
